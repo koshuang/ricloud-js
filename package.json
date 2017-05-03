@@ -4,10 +4,12 @@
   "license": "LGPL-3.0",
   "homepage": "https://www.reincubate.com",
   "scripts": {
-    "test": "node ricloud-test.js"
+    "test": "node ricloud-test.js",
+    "test:all": "node_modules/.bin/mocha --recursive test -t 10000 -G"
   },
   "dependencies": {
     "debug": "^2.6.3",
+    "http-signature": "^1.2.0",
     "lodash": "^4.17.4",
     "moment": "~2.10.6",
     "readline-sync": "~1.2.21",
@@ -23,6 +25,9 @@
   ],
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "eslint": "^3.14.1"
+    "chai": "^3.5.0",
+    "eslint": "^3.14.1",
+    "mocha": "^3.3.0",
+    "nock": "^9.0.13"
   }
 }
