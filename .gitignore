@@ -15,3 +15,7 @@ node_modules
 npm-debug.log
 
 sms.db
+
+/.python-version
+/logs
+/asmaster-test.js
