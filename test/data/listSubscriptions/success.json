@@ -1,0 +1,23 @@
+{
+  "accounts": [
+    {
+      "status": "ok",
+      "devices": [],
+      "account_id": 99951,
+      "service": "icloud"
+    },
+    {
+      "status": "inactive",
+      "devices": [],
+      "account_id": 99991,
+      "service": "icloud"
+    },
+    {
+      "status": "inactive",
+      "devices": [],
+      "account_id": 125293,
+      "service": "icloud"
+    }
+  ],
+  "success": true
+}
