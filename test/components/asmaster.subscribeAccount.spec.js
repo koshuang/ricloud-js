@@ -22,44 +22,6 @@ describe('Test Asmaster', () => {
     nock.cleanAll();
   });
 
-  describe('when calling listSubscriptions', () => {
-    var mock = function() {
-        httpMock.asmaster
-          .post('/list-subscriptions/', { service: 'icloud' })
-          .reply(200, listSubscriptionsData);
-    };
-
-    beforeEach(() => {
-      mock();
-    });
-
-    it('should be true', async () => {
-      const params = { service: 'icloud' };
-      const response = await asmaster.listSubscriptions(params);
-      const body = JSON.parse(response.body);
-      expect(body).to.have.keys('accounts', 'success');
-    });
-  });
-
-  describe('when calling listServices', () => {
-    var mock = function() {
-        httpMock.asmaster
-          .post('/list-services/')
-          .reply(200, listServicesData);
-    };
-
-    beforeEach((done) => {
-      mock();
-      done();
-    });
-
-    it('should return services', async () => {
-      const response = await asmaster.listServices();
-      const body = JSON.parse(response.body);
-      expect(body).to.have.keys('services', 'stream_endpoints', 'success');
-    });
-  });
-
   describe('when calling subscribeAccount', () => {
     var params = {
       service: 'icloud',
