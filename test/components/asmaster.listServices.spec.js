@@ -2,7 +2,6 @@ var chai = require('chai');
 var nock = require('nock');
 var httpMock = require('../helpers/httpMock');
 var Asmaster = require('../../dist/components/asmaster');
-var listSubscriptionsData = require('../data/listSubscriptions/success.json');
 var listServicesData = require('../data/listServices/success.json');
 
 var expect = chai.expect;
@@ -12,32 +11,14 @@ describe('Test Asmaster', () => {
   var token = 'tGBqNrwvfqHlaGnVsJBdQuWfuKspeZRHfINmBsjJkoSufNYdLcjfPPOwjhHjSHZM';
   var asmaster;
 
-  before(() => {
+  before((done) => {
     asmaster = new Asmaster(endpoint, token);
+    done();
   });
 
   afterEach(() => {
     httpMock.asmaster.done();
     nock.cleanAll();
-  });
-
-  describe('when calling listSubscriptions', () => {
-    var mock = function() {
-        httpMock.asmaster
-          .post('/list-subscriptions/', { service: 'icloud' })
-          .reply(200, listSubscriptionsData);
-    };
-
-    beforeEach(() => {
-      mock();
-    });
-
-    it('should be true', async () => {
-      const params = { service: 'icloud' };
-      const response = await asmaster.listSubscriptions(params);
-      const body = JSON.parse(response.body);
-      expect(body).to.have.keys('accounts', 'success');
-    });
   });
 
   describe('when calling listServices', () => {
@@ -47,9 +28,8 @@ describe('Test Asmaster', () => {
           .reply(200, listServicesData);
     };
 
-    beforeEach((done) => {
+    beforeEach(() => {
       mock();
-      done();
     });
 
     it('should return services', async () => {

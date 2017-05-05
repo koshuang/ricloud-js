@@ -1,8 +1,6 @@
 /* eslint no-use-before-define: 0 */
 'use strict';
 var request = require('request');
-var _ = require('lodash');
-var debug = require('debug')('ricloud/asmaster');
 
 var HOST = 'https://asmaster.reincubate.com';
 var ENDPOINTS = {
@@ -94,6 +92,10 @@ asmaster.prototype.generateHeaders = function() {
 
 asmaster.prototype.listSubscriptions = function(params) {
   return this.sendPostRequest('list_subscriptions', params);
+};
+
+asmaster.prototype.listServices = function() {
+  return this.sendPostRequest('list_services');
 };
 
 module.exports = asmaster;
