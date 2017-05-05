@@ -98,4 +98,8 @@ asmaster.prototype.listServices = function() {
   return this.sendPostRequest('list_services');
 };
 
+asmaster.prototype.subscribeAccount = function(params) {
+  return this.sendPostRequest('subscribe_account', params);
+};
+
 module.exports = asmaster;

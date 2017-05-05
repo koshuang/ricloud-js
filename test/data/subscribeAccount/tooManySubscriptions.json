@@ -1,0 +1,6 @@
+{
+  "message": "Too many subscriptions for the same account in the safety window.",
+  "account_id": 99951,
+  "success": false,
+  "error": "asmaster-account-too-many-subscriptions"
+}

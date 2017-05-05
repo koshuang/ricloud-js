@@ -1,0 +1,8 @@
+{
+  "message": "This account has Two Step Verification enabled, please select a device to challenge.",
+  "data": {
+    "trustedDevices": ["********12", "Renate's iPhone - iPhone 6s"]
+  },
+  "error": "2fa-required",
+  "account_id": "1010"
+}
