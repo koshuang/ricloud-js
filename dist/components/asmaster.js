@@ -106,4 +106,8 @@ asmaster.prototype.listDevices = function(params) {
   return this.sendPostRequest('list_devices', params);
 };
 
+asmaster.prototype.perform2FAChallenge = function(params) {
+  return this.sendPostRequest('perform_2fa_challenge', params);
+};
+
 module.exports = asmaster;
