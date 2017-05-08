@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "devices": [
+    {
+      "ios_version": "10.3.2",
+      "device_tag": "021399ca8b57d6ff65931364e03d11fa6efd34ea",
+      "colour": "#121211",
+      "device_name": "Jenna 的 iPhone",
+      "latest-backup": "2017-09-12 02:56:38.000000",
+      "model": "N69AP",
+      "device_id": 945,
+      "serial": "F17SDJZMH2XJ",
+      "name": "iPhone SE"
+    },
+    {
+      "ios_version": "10.3.3",
+      "device_tag": "dc9eff3ee519c88bb76b5639622b2b497d2e0f28",
+      "colour": "#3b3b3c",
+      "device_name": "Jenna's iPad",
+      "latest-backup": "2017-09-18 09:04:53.000000",
+      "model": "J96AP",
+      "device_id": 946,
+      "serial": "DLXR809RGHK9",
+      "name": "iPad mini 4"
+    }
+  ]
+}

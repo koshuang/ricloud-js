@@ -102,4 +102,8 @@ asmaster.prototype.subscribeAccount = function(params) {
   return this.sendPostRequest('subscribe_account', params);
 };
 
+asmaster.prototype.listDevices = function(params) {
+  return this.sendPostRequest('list_devices', params);
+};
+
 module.exports = asmaster;
