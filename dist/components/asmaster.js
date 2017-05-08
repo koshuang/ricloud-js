@@ -125,4 +125,8 @@ asmaster.prototype.submit2FAChallenge = function(params) {
   return this.sendPostRequest('submit_2fa_challenge', params);
 };
 
+asmaster.prototype.subscribeDevice = function(params) {
+  return this.sendPostRequest('subscribe_device', params);
+};
+
 module.exports = asmaster;
