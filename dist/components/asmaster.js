@@ -113,6 +113,13 @@ asmaster.prototype.perform2FAChallenge = function(params) {
 asmaster.prototype.resubscribeAccount = function(params) {
   return this.sendPostRequest('resubscribe_account', params);
 };
+asmaster.prototype.unsubscribeAccount = function(params) {
+  return this.sendPostRequest('unsubscribe_account', params);
+};
+
+asmaster.prototype.perform2FAChallenge = function(params) {
+  return this.sendPostRequest('perform_2fa_challenge', params);
+};
 
 asmaster.prototype.submit2FAChallenge = function(params) {
   return this.sendPostRequest('submit_2fa_challenge', params);
