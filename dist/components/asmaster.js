@@ -129,4 +129,8 @@ asmaster.prototype.subscribeDevice = function(params) {
   return this.sendPostRequest('subscribe_device', params);
 };
 
+asmaster.prototype.unsubscribeDevice = function(params) {
+  return this.sendPostRequest('unsubscribe_device', params);
+};
+
 module.exports = asmaster;
