@@ -4,6 +4,7 @@ var moment = require('moment');
 var fs = require('fs');
 var _ = require('lodash');
 var debug = require('debug')('ricloud');
+var Asmaster = require('./components/asmaster');
 
 // endpoints
 var ENDPOINTS = {
@@ -374,5 +375,6 @@ function generateOptions(context, endpoint, data) {
   };
 }
 
+riCloud.Asmaster = Asmaster;
 
 module.exports = riCloud;
