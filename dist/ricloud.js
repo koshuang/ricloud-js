@@ -165,11 +165,10 @@ riCloud.prototype.refreshSession = function(cb) {
   var options = generateOptions(this, 'refresh_session', data);
 
   function callback(error, response, body) {
-    debug(`refresh session: status code: ${response.statusCode}, data:`, JSON.parse(response.body));
+    debug(`refresh session: status code: ${response.statusCode}, data:`, body);
 
     if (!error && response.statusCode === 200) {
-      var data = JSON.parse(body);
-      cb(0, data);
+      cb(0, response);
     } else {
       cb(context.error.GENERAL, response);
     }
@@ -224,8 +223,7 @@ riCloud.prototype.requestData = function(device, requestedData, sinceDate, cb) {
 
   function callback(error, response, body) {
     if (!error && response.statusCode === 200) {
-      var data = JSON.parse(body);
-      cb(0, data);
+      cb(0, response);
     } else {
       cb(context.error.GENERAL, response);
     }
@@ -260,9 +258,7 @@ riCloud.prototype.downloadFile = function(device, fileID, out, cb) {
 
   function callback(error, response, body) {
     if (!error && response.statusCode === 200) {
-      // If out is null, return the data as the result. Otherwise return null
-      var result = out ? null : body;
-      cb(0, result);
+      cb(0, response);
     } else {
       cb(context.error.GENERAL, response);
     }
@@ -292,7 +288,7 @@ riCloud.prototype.requestTwoFAChallenge = function(challengeDevice, cb) {
     if (!error && response.statusCode === 200) {
       // The challenge has been processed, we now need to wait
       // for the user's submission
-      cb(0, null);
+      cb(0, response);
     } else {
       cb(context.error.GENERAL, response);
     }
@@ -318,7 +314,7 @@ riCloud.prototype.submitTwoFAChallenge = function(code, cb) {
   function callback(error, response, data) {
     if (!error && response.statusCode === 200) {
       // Worked. Now user needs to log in again.
-      cb(0, null);
+      cb(0, response);
     } else {
       cb(context.error.GENERAL, response);
     }

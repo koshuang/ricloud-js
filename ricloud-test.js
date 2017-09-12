@@ -131,12 +131,14 @@ function showDeviceInfo(err, data) {
   }
 }
 
-function showData(err, data) {
+function showData(err, response) {
+  var data = JSON.parse(response.body);
+
   if (err) {
     showError(data);
   }
 
-  console.log(data);
+  console.log(response.body);
 
   downloadFile();
 }
