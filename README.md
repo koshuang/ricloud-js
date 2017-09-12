@@ -93,8 +93,8 @@ If no selection is made, the API will return all available data available. The f
 ```javascript
 var requested_data = api.data.SMS
 var since = new Date(2015, 0, 1)
-api.requestData(device, requested_data, since, function(err,data) {
-    console.log(data)
+api.requestData(device, requested_data, since, function(err, response) {
+    console.log(response.body);
 })
 ```
 
