@@ -8,6 +8,7 @@
     "test:all": "node_modules/.bin/mocha --recursive test -t 10000 -G"
   },
   "dependencies": {
+    "babel-preset-es2015": "^6.24.1",
     "debug": "^2.6.3",
     "http-signature": "^1.2.0",
     "lodash": "^4.17.4",
