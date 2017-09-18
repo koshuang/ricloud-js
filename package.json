@@ -5,7 +5,7 @@
   "homepage": "https://www.reincubate.com",
   "scripts": {
     "test": "node ricloud-test.js",
-    "test:all": "node_modules/.bin/mocha --recursive test -t 10000 -G"
+    "test:all": "node_modules/.bin/mocha --compilers js:babel-core/register --recursive test -t 10000 -G"
   },
   "dependencies": {
     "babel-core": "^6.26.0",
