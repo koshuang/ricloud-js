@@ -12,6 +12,7 @@
     "http-signature": "^1.2.0",
     "lodash": "^4.17.4",
     "moment": "~2.10.6",
+    "promise": "^8.0.1",
     "readline-sync": "~1.2.21",
     "request": "~2.83.0"
   },
