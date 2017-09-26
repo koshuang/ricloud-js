@@ -6,6 +6,7 @@ var HOST = 'https://asapi.reincubate.com';
 var ENDPOINTS = {
   account: '/account/',
   'register-account': '/register-account/',
+  'deregister-account': '/deregister-account/',
 };
 
 
@@ -84,6 +85,10 @@ asapi.prototype.account = function () {
 
 asapi.prototype.registerAccount = function(params) {
   return this.sendPostRequest('register-account', params);
+};
+
+asapi.prototype.deregisterAccount = function(params) {
+  return this.sendPostRequest('deregister-account', params);
 };
 
 asapi.prototype.generateHeaders = function() {
