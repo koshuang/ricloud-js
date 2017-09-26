@@ -5,6 +5,7 @@ var request = require('request');
 var HOST = 'https://asapi.reincubate.com';
 var ENDPOINTS = {
   account: '/account/',
+  'register-account': '/register-account/',
 };
 
 
@@ -79,6 +80,10 @@ asapi.prototype.sendPostRequest = function (endpoint, body) {
 
 asapi.prototype.account = function () {
   return this.sendGetRequest('account');
+};
+
+asapi.prototype.registerAccount = function(params) {
+  return this.sendPostRequest('register-account', params);
 };
 
 asapi.prototype.generateHeaders = function() {
