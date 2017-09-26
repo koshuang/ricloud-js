@@ -1,0 +1,300 @@
+{
+  "services": [
+    {
+      "name": "iCloud",
+      "actions": [
+        {
+          "description": "",
+          "execution": "Asynchronous",
+          "name": "Log in",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Password",
+              "slug": "password"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Consumer Info",
+              "slug": "consumer_info"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Mock",
+              "slug": "mock"
+            }
+          ],
+          "slug": "log-in"
+        },
+        {
+          "description": "",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Device",
+              "slug": "device"
+            },
+            {
+              "type": "csv",
+              "description": "",
+              "optional": false,
+              "name": "Data",
+              "slug": "data"
+            },
+            {
+              "type": "date",
+              "description": "",
+              "optional": true,
+              "name": "since",
+              "slug": "since"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Consumer Info",
+              "slug": "consumer_info"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Mock",
+              "slug": "mock"
+            },
+            {
+              "type": "csv",
+              "description": "",
+              "optional": true,
+              "name": "Meta type",
+              "slug": "meta"
+            }
+          ],
+          "name": "Fetch Data",
+          "execution": "Asynchronous",
+          "slug": "fetch-data",
+          "permissions": {
+            "data": [
+              "sms",
+              "photos",
+              "call_history",
+              "location",
+              "whatsapp_messages",
+              "facebook_messages",
+              "contacts",
+              "browser_history",
+              "snapchat_messages"
+            ]
+          }
+        },
+        {
+          "description": "",
+          "execution": "Asynchronous",
+          "name": "Download file",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Device",
+              "slug": "device"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "File id",
+              "slug": "file"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Consumer Info",
+              "slug": "consumer_info"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Mock",
+              "slug": "mock"
+            }
+          ],
+          "slug": "download-file"
+        },
+        {
+          "description": "",
+          "execution": "Asynchronous",
+          "name": "Perform 2FA Challenge",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Challenge device",
+              "slug": "challenge"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Consumer Info",
+              "slug": "consumer_info"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Mock",
+              "slug": "mock"
+            }
+          ],
+          "slug": "perform-2fa-challenge"
+        },
+        {
+          "description": "",
+          "execution": "Asynchronous",
+          "name": "Submit 2FA Challenge",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "2FA code",
+              "slug": "code"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Consumer Info",
+              "slug": "consumer_info"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Mock",
+              "slug": "mock"
+            }
+          ],
+          "slug": "submit-2fa-challenge"
+        },
+        {
+          "description": "",
+          "execution": "Asynchronous",
+          "name": "List devices",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Consumer Info",
+              "slug": "consumer_info"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "Account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": true,
+              "name": "Mock",
+              "slug": "mock"
+            }
+          ],
+          "slug": "list-devices"
+        },
+        {
+          "description": "",
+          "execution": "Asynchronous",
+          "name": "Refresh Session",
+          "parameters": [
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "account",
+              "slug": "account"
+            },
+            {
+              "type": "string",
+              "description": "",
+              "optional": false,
+              "name": "auth_token",
+              "slug": "auth_token"
+            }
+          ],
+          "slug": "refresh-session"
+        }
+      ],
+      "slug": "icloud"
+    }
+  ],
+  "retrieval_protocol": "aschannel",
+  "task_execution_endpoint": {
+    "host": "do-not-use",
+    "protocol": "http",
+    "uri": "do-not-use"
+  },
+  "task_submission_endpoint": {
+    "host": "asapi.reincubate.com",
+    "protocol": "https",
+    "uri": "/submit-task/"
+  },
+  "stream_endpoints": [
+    {
+      "host": "aschannel.reincubate.com",
+      "protocol": "https",
+      "uri": "/stream/"
+    }
+  ]
+}
