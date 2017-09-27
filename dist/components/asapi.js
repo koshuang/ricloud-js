@@ -11,7 +11,13 @@ var ENDPOINTS = {
 
 
 function getEndpoint(endpointName) {
-  return HOST + ENDPOINTS[endpointName];
+  var endpoint = ENDPOINTS[endpointName];
+
+  if (endpoint) {
+    return HOST + endpoint;
+  } else {
+    return HOST + endpointName;
+  }
 }
 
 function generateOptions(method, endpoint, headers, data) {
@@ -89,6 +95,10 @@ asapi.prototype.registerAccount = function(params) {
 
 asapi.prototype.deregisterAccount = function(params) {
   return this.sendPostRequest('deregister-account', params);
+};
+
+asapi.prototype.submitTask = function(endpoint, params) {
+  return this.sendPostRequest(endpoint, params);
 };
 
 asapi.prototype.generateHeaders = function() {
