@@ -370,6 +370,7 @@ function generateOptions(context, endpoint, data) {
     method: 'POST',
     auth: context.auth,
     form: data,
+    time: true, // profiling API call
   };
 }
 
