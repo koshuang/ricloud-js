@@ -162,6 +162,11 @@ riCloud.prototype.refreshSession = function(cb) {
   var data = {
     auth_token: this.authToken,
   };
+
+  if (this.account) {
+    data.account = this.account; 
+  }
+
   var options = generateOptions(this, 'refresh_session', data);
 
   function callback(error, response, body) {
